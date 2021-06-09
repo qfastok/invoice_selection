@@ -1,0 +1,17 @@
+<odoo>
+    <template id="report_invoice_quality"
+              inherit_id="account.report_invoice_document">
+
+        <xpath expr="//th[@name='th_description']" position="after">
+            <th name="th_invoice_selection" class="text-right">
+                <span>Quality</span>
+            </th>
+        </xpath>
+        <xpath expr="//td[@name='account_invoice_line_name']"
+               position="after">
+            <td name="account_invoice_line_invoice_selection">
+                <span t-field="line.invoice_selection"/>
+            </td>
+        </xpath>
+    </template>
+</odoo>
